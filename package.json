@@ -1,14 +1,14 @@
 {
-  "name": "scrapinode",
+  "name": "scrapingnode",
   "version": "0.1.0",
   "description": "tiniest node scraper",
-  "main": "scrapinode",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zacanger/scrapinode.git"
+    "url": "git+https://github.com/zacanger/scrapingnode.git"
   },
   "keywords": [
     "scraping",
@@ -19,10 +19,11 @@
   "preferGlobal": true,
   "bin": "index.js",
   "bugs": {
-    "url": "https://github.com/zacanger/scrapinode/issues"
+    "url": "https://github.com/zacanger/scrapingnode/issues"
   },
-  "homepage": "https://github.com/zacanger/scrapinode#readme",
+  "homepage": "https://github.com/zacanger/scrapingnode#readme",
   "dependencies": {
     "ineed": "^1.0.4"
   }
 }
+
