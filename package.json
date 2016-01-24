@@ -1,0 +1,28 @@
+{
+  "name": "scrapinode",
+  "version": "0.1.0",
+  "description": "tiniest node scraper",
+  "main": "scrapinode",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zacanger/scrapinode.git"
+  },
+  "keywords": [
+    "scraping",
+    "ineed"
+  ],
+  "author": "zacanger",
+  "license": "WTFPL",
+  "preferGlobal": true,
+  "bin": "index.js",
+  "bugs": {
+    "url": "https://github.com/zacanger/scrapinode/issues"
+  },
+  "homepage": "https://github.com/zacanger/scrapinode#readme",
+  "dependencies": {
+    "ineed": "^1.0.4"
+  }
+}
