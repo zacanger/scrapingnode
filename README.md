@@ -5,7 +5,7 @@ this does what i need it to do.
 
 you'll get a bunch of stuff you can really easily parse. nice, huh?
 
-maybe do it like `scrapingnode zacanger.com > zacanger.com.objects.js`
+maybe do it like `scrapingnode zacanger.com > zacanger.com.json`
 so you have a nice file to use.
 
 gets images, links, scripts, and stylesheets.

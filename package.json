@@ -1,6 +1,6 @@
 {
   "name": "scrapingnode",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "tiniest node scraper",
   "main": "index.js",
   "scripts": {

@@ -19,3 +19,4 @@ if (!url) {
     process.stdout.write('\n' + JSON.stringify(result, null, 2) + '\n\n')
   })
 }
+
