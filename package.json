@@ -1,29 +1,32 @@
 {
   "name": "scrapingnode",
-  "version": "0.3.2",
   "description": "tiniest node scraper",
+  "version": "0.3.3",
+  "author": {
+    "name": "Zac Anger",
+    "email": "zac@zacanger.com",
+    "url": "http://zacanger.com"
+  },
+  "license": "WTFPL",
   "main": "index.js",
+  "preferGlobal": true,
+  "bin": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "homepage": "https://github.com/zacanger/scrapingnode#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zacanger/scrapingnode.git"
   },
-  "keywords": [
-    "scraping",
-    "ineed"
-  ],
-  "author": "zacanger",
-  "license": "WTFPL",
-  "preferGlobal": true,
-  "bin": "index.js",
   "bugs": {
     "url": "https://github.com/zacanger/scrapingnode/issues"
   },
-  "homepage": "https://github.com/zacanger/scrapingnode#readme",
+  "keywords": [
+    "ineed",
+    "scraping"
+  ],
   "dependencies": {
     "ineed": "^1.0.4"
   }
 }
-

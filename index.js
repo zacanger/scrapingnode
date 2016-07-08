@@ -4,19 +4,21 @@
 
 const
   ineed = require('ineed')
-, url   = process.argv[2]
+, arg   = process.argv[2]
+, out   = process.stdout
 
-if (!url) {
-  process.stdout.write('\nplease supply a url! usage: scrapingnode npmjs.com/package/scapingnode\n\n')
+if (!arg) {
+  out.write('\nplease supply a url!\nusage: scrapingnode npmjs.com/package/scapingnode\n\n')
 } else {
+  const url = arg.includes('http://' || 'https://') ? arg : `http://${arg}`
   ineed
   .collect
-  .images
+  .title
   .hyperlinks
+  .images
   .scripts
   .stylesheets
-  .from('http://' + url, (err, response, result) => {
-    process.stdout.write('\n' + JSON.stringify(result, null, 2) + '\n\n')
+  .from(url, (err, response, result) => {
+    out.write(`${JSON.stringify(result, null, 2)}\n`)
   })
 }
-
