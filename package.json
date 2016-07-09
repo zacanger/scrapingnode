@@ -1,7 +1,7 @@
 {
   "name": "scrapingnode",
-  "description": "tiniest node scraper",
-  "version": "0.3.3",
+  "description": "tiny cli web scraper",
+  "version": "0.3.4",
   "author": {
     "name": "Zac Anger",
     "email": "zac@zacanger.com",
@@ -24,7 +24,11 @@
   },
   "keywords": [
     "ineed",
-    "scraping"
+    "scraping",
+    "scraper",
+    "web-scraper",
+    "cli",
+    "command-line"
   ],
   "dependencies": {
     "ineed": "^1.0.4"
