@@ -17,29 +17,29 @@ all (all of the above)
 
 `
 
-if (!arg || !src || arg == 'help' || arg == '--help' || arg == '-h') {
+if (!arg || !src || arg === 'help' || arg === '--help' || arg === '-h') {
   out.write(help)
 } else {
   const url = src.includes('http://' || 'https://') ? src : `http://${src}`
-  if (arg.includes('content')) {
+  if (arg === 'content') {
     ineed.collect.title.texts
     .from(url, (err, response, result) => {
       out.write(`${JSON.stringify(result, null, 2)}\n`)
     })
   }
-  if (arg == 'code') {
+  if (arg === 'code') {
     ineed.collect.title.comments.cssCode.jsCode
     .from(url, (err, response, result) => {
       out.write(`${JSON.stringify(result, null, 2)}\n`)
     })
   }
-  if (arg == 'data') {
+  if (arg === 'data') {
     ineed.collect.title.hyperlinks.images.scripts.stylesheets
     .from(url, (err, response, result) => {
       out.write(`${JSON.stringify(result, null, 2)}\n`)
     })
   }
-  if (arg == 'all') {
+  if (arg === 'all') {
     ineed.collect.title.texts.stylesheets.scripts.hyperlinks.images.comments.cssCode.jsCode
     .from(url, (err, response, result) => {
       out.write(`${JSON.stringify(result, null, 2)}\n`)
