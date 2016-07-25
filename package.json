@@ -1,7 +1,7 @@
 {
   "name": "scrapingnode",
   "description": "tiny command-line web-scraping utility",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "author": {
     "name": "Zac Anger",
     "email": "zac@zacanger.com",
@@ -23,12 +23,12 @@
     "url": "https://github.com/zacanger/scrapingnode/issues"
   },
   "keywords": [
-    "ineed",
-    "scraping",
-    "scraper",
-    "web-scraper",
     "cli",
-    "command-line"
+    "command-line",
+    "ineed",
+    "scraper",
+    "scraping",
+    "web-scraper"
   ],
   "dependencies": {
     "ineed": "^1.0.4"

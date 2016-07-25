@@ -1,20 +1,33 @@
-a simple command-line wrapper around [ineed](https://www.npmjs.com/package/ineed).
+# scrapingnode
 
-this does what i need it to do.
+A simple command-line wrapper around [ineed](https://www.npmjs.com/package/ineed).
 
-`npm i -g scrapingnode`, then run it with `scapingnode`.
+### Installation
 
-```text
-usage: scrapingnode option url
-option can be one of
-content (which collects content) or
-data (which collects links, scripts, etc.) or
-code (which collects HTML comments, CSS, and JS)
-all (all of the above)
+`npm i -g scrapingnode`
+
+### Usage:
+
+`scrapingnode`
+
 ```
-(you can leave off the `http://` if you want. or not. up to you.)
+Usage: scrapingnode <option> <url>
+Option can be one of:
+content   (which collects content) or
+data      (which collects links, scripts, etc.) or
+code      (which collects HTML comments, CSS, and JS)
+all       (all of the above)
 
-you'll get a bunch of stuff you can really easily parse. nice, huh?
+Example: scrapingnode code zacanger.com
+```
 
-maybe do it like `scrapingnode zacanger.com > zacanger.com.json`
-so you have a nice file to use, or `scrapingnode zacanger.com | jq .`.
+You can leave off the `https://`/`http://` if you want. Or not. Up to you.
+
+You'll get a bunch of stuff you can really easily parse. Nice, huh?
+
+Maybe do something like `scrapingnode content someblog.com > someblog.com.json`,
+or `scrapingnode code | jq .` or something.
+
+Contributions welcome.
+
+License: WTFPL.
