@@ -24,7 +24,7 @@ Example: scrapingnode code zacanger.com
 const doTheThing = () => {
   if (!arg || !src) {
     if (arg === '--version' || arg === '-v' || arg === 'version') {
-      out.write(`${pkg.name} version ${pkg.version}`)
+      out.write(`${pkg.name} version ${pkg.version}\n`)
     } else {
       out.write(help)
     }

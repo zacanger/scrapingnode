@@ -25,8 +25,8 @@ You can leave off the `https://`/`http://` if you want. Or not. Up to you.
 
 You'll get a bunch of stuff you can really easily parse. Nice, huh?
 
-Maybe do something like `scrapingnode content someblog.com > someblog.com.json`,
-or `scrapingnode code | jq .` or something.
+Maybe do something like `scrapingnode content blog.zacanger.com > zacs-blog.json`,
+or `scrapingnode code zacanger.com/p | jq .jsCode` or something.
 
 Contributions welcome.
 
