@@ -8,7 +8,7 @@ const
 , src   = process.argv[3]
 , out   = process.stdout
 , pkg   = require('./package.json')
-, write = res => out.write(`${JSON.stringify(res, null, 2)}\n`)
+, write = a => out.write(`${JSON.stringify(a, null, 2)}\n`)
 , help  = `
 Usage: scrapingnode <option> <url> || scrapingnode -h || scrapingnode -v
 Option can be one of:
@@ -21,28 +21,62 @@ Example: scrapingnode code zacanger.com
 
 `
 
-if (!arg || !src) {
-  if (arg === '--version' || arg === '-v' || arg === 'version') {
-    out.write(`${pkg.name} version ${pkg.version}`)
+const doTheThing = () => {
+  if (!arg || !src) {
+    if (arg === '--version' || arg === '-v' || arg === 'version') {
+      out.write(`${pkg.name} version ${pkg.version}`)
+    } else {
+      out.write(help)
+    }
   } else {
-    out.write(help)
+    const url = src.includes('http://' || 'https://') ? src : `http://${src}`
+    switch (arg) {
+      case 'content':
+        ineed
+          .collect
+          .title
+          .texts
+          .from(url, (err, rep, res) => write(res))
+        break
+      case 'code':
+        ineed
+          .collect
+          .title
+          .comments
+          .cssCode
+          .jsCode
+          .from(url, (err, rep, res) => write(res))
+        break
+      case 'data':
+        ineed
+          .collect
+          .title
+          .hyperlinks
+          .images
+          .scripts
+          .stylesheets
+          .from(url, (err, rep, res) => write(res))
+        break
+      case 'all':
+        ineed
+          .collect
+          .title
+          .texts
+          .stylesheets
+          .scripts
+          .hyperlinks
+          .images
+          .comments
+          .cssCode
+          .jsCode
+          .from(url, (err, rep, res) => write(res))
+        break
+      default:
+        out.write(help)
+    }
   }
-} else {
-  const url = src.includes('http://' || 'https://') ? src : `http://${src}`
-  if (arg === 'content') {
-    ineed.collect.title.texts
-      .from(url, (err, response, result) => write(result))
-  }
-  if (arg === 'code') {
-    ineed.collect.title.comments.cssCode.jsCode
-      .from(url, (err, response, result) => write(result))
-  }
-  if (arg === 'data') {
-    ineed.collect.title.hyperlinks.images.scripts.stylesheets
-      .from(url, (err, response, result) => write(result))
-  }
-  if (arg === 'all') {
-    ineed.collect.title.texts.stylesheets.scripts.hyperlinks.images.comments.cssCode.jsCode
-      .from(url, (err, response, result) => write(result))
-  }
+}
+
+if (!module.parent) {
+  doTheThing()
 }
